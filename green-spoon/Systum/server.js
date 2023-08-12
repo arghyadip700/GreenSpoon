@@ -4,7 +4,7 @@ const port=3001
 const route=require("../Route/route.js");
 var mongoose=require("mongoose");
 mongoose.set('strictQuery',true)
-const uri='mongodb+srv://gdscgcect:6WfCpxST66ofieFh@greenspoon.ovdll57.mongodb.net/GreenSpoon?retryWrites=true&w=majority'
+const uri='mongodb+srv://gdscgcect:greenspoon@greenspoon.ovdll57.mongodb.net/GreenSpoon?retryWrites=true&w=majority'
 mongoose.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true },function checkDB(error)
 {
      if(error)
@@ -12,8 +12,7 @@ mongoose.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true },functio
      else
           console.log("success");
 })
-
-
+ 
 app.use(express.json());
 app.use(route);
 app.listen(port)

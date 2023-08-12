@@ -2,9 +2,9 @@ var userservice = require("../Route/userservice.js")
 
 var findOneUser = async (req, res) => {
      const { email, username } = req.body;
-
+     console.log(email)
      if (!email && !username) {
-          return res.send({ "status": false, "data": "No 'email' or 'username' provided" });
+          return res.send({ "status": false, "data": "No 'email' or 'username' provided",src:email });
      }
 
      if (email) {
