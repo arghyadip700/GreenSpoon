@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from "react";
 import ab from "./all-img/Food.jpg";
 import { Link } from "react-router-dom";
@@ -10,10 +10,7 @@ import meat from './all-img/Meat.jpg'
 import cdf from './all-img/CookedFood.jpg'
 import oth from './all-img/Paneer.jpg'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
->>>>>>> 61ab5a8b22e440b593686ac7cba6a1e351b85b31
-=======
->>>>>>> 114f81dae001db0e2edc92137c3751b9b8144a7e
+
 function Rest_home() {
     return (
         <>
@@ -39,8 +36,7 @@ function Rest_home() {
                     and protect the planet.”{" "}
                 </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         </div >
       <div className="restContainer">
         <h3>Add your food here</h3>
@@ -55,7 +51,7 @@ function Rest_home() {
 }
 
 export default Rest_home;
-=======
+
             <h3 className="2nd-heading m-3 text-center">Add your food here</h3>
             <div className="restContainer m-5">
                 {/* <div className="card mx-5" style={{ width: "18rem" }}>
@@ -138,7 +134,7 @@ export default Rest_home;
                     </div>
                 </div>
             </div>
-=======
+
             <div className="restContainer">
                 
                 
@@ -230,7 +226,7 @@ export default Rest_home;
                     </div>
                 </div>
             </div>
->>>>>>> 114f81dae001db0e2edc92137c3751b9b8144a7e
+
             {/* {/* <div className="card-body  d-flex flex-column justify-content-center ">
                 <a href="/next_res" dis className="btn btn-primary " >Add Food</a>
             </div> */}
@@ -239,4 +235,4 @@ export default Rest_home;
 }
 
 export default Rest_home
->>>>>>> 61ab5a8b22e440b593686ac7cba6a1e351b85b31
+
