@@ -6,7 +6,10 @@ function Navbar() {
     let location = useLocation();
     const { loginWithRedirect } = useAuth0();
     const { logout } = useAuth0();
+    const { user } = useAuth0();
     const { isAuthenticated } = useAuth0();
+    
+    
     React.useEffect(() => {
       console.log(location.pathname);
     }, [location]);
@@ -44,9 +47,24 @@ function Navbar() {
             <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+        
         <li className="nav-item">
           <a className="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
+
+        <li>
+       {isAuthenticated && <p>
+        {user.name}
+
+
+       </p>
+
+       }
+    
+  
+    </li>
+
+
         
         {isAuthenticated?(
   <li class="nav-item">
@@ -57,7 +75,13 @@ Log Out
   <li class="nav-item">
   <button type="button" class="btn btn-info" onClick={() => loginWithRedirect()}>Log In</button>
   </li>
+
+  
+    
 )}
+
+
+
 </ul>
 
      
