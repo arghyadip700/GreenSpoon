@@ -73,6 +73,8 @@
 
 }
 
+/* Restaurant Home page */
+
 .center-text{
   position: absolute;
   top: 50%;
@@ -81,4 +83,16 @@
   color: antiquewhite;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+.card-text{
+  height: 100%;
+}
+@media screen and (max-width: 850px) {
+  .Rule-ngo-res .col-sm-6 {
+   
+    width: 100%;
+}
+.card-text{
+  height: 100%;
+}
 }
