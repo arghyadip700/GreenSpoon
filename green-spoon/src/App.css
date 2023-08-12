@@ -96,3 +96,13 @@
   height: 100%;
 }
 }
+.restallfood{
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  
+}
+.side{
+  background-color: #4e840788;
+
+}

@@ -4,11 +4,12 @@ import Nav from "./components/Navbar";
 import ComHome from "./components/ComHome";
 import Rest_home from "./components/Rest_home";
 import Ngo_home from "./components/Ngo_home";
+import UserState from "./components/context/user/UserState";
 
 function App() {
   return (
     <>
-
+    <UserState>
       <Router>
         <Nav />
        
@@ -22,6 +23,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+      </UserState>
 
     </>
   );

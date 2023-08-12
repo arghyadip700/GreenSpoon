@@ -1,13 +1,32 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import CountUp from 'react-countup'
 import cha from './all-img/Charity-in-People.webp'
 import { useAuth0 } from "@auth0/auth0-react";
+//import userContext from "./context/user/userContext";
 function ComHome() {
+  //const context = userContext(userContext);
+  //const {adduser} = context;
+  const [User,setUser] = useState({name:"",email:"",specific:""})
+
   const { loginWithRedirect } = useAuth0();
-  const { isAuthenticated,isLoading } = useAuth0();
+  const { user, isAuthenticated,isLoading } = useAuth0();
+  const handleclick =(e)=>{
+    e.preventDefault();
+    if(isAuthenticated){
+    setUser({name:user.name,email:user.email,specific:"NGO"})}
+    //adduser(User);
+  }
+  const handleclickR =(e)=>{
+    e.preventDefault();
+    if(isAuthenticated){
+    setUser({name:user.name,email:user.email,specific:"RESTAURENT"})}
+   // adduser(User);
+  }
+  console.log(User);
   if (isLoading) {
     return <div>Loading ...</div>;
   }
+ 
   return (
     <>
     <div >
@@ -31,7 +50,7 @@ function ComHome() {
       </ul>
     </p>
     {isAuthenticated?(
-    <a href="#" class="btn btn-primary">Go somewhere</a>):
+    <a href="#" class="btn btn-primary" onClick={handleclick}>Go somewhere</a>):
     (<a href="#" dis class="btn btn-primary " onClick={() => loginWithRedirect()}>Collect Food</a>)}
   </div>
         </div>
@@ -49,7 +68,7 @@ function ComHome() {
       </ul> 
     </p>
     {isAuthenticated?(
-    <a href="#" class="btn btn-primary">Go somewhere</a>):
+    <a href="#" class="btn btn-primary" onClick={handleclickR}>Go somewhere</a>):
     (<a href="#" dis class="btn btn-primary " onClick={() => loginWithRedirect()}>Start Charity</a>)}
   </div>
         </div>   

@@ -10,13 +10,8 @@ function Rest_home() {
                 </div>
             </div>
             <div className="restContainer">
-<<<<<<< HEAD
-                
-                
-=======
                 <h3>Add your food here</h3>
 
->>>>>>> 0143f5b23f872db95899c30e28a62869d68bf4bf
             </div>
             <div class="card-body  d-flex flex-column justify-content-center ">
     <a href="/next_res" dis class="btn btn-primary " >Add Food</a>
