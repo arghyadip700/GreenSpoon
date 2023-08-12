@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "@auth0/auth0-react": "^2.2.0",
+    "axios": "^1.4.0",
+    "axos": "^0.0.1",
+    "express": "^4.18.2",
     "react-router-dom": "^6.15.0"
   }
 }
