@@ -1,6 +1,14 @@
 import React from 'react'
-
+import { Link, useLocation } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 function Navbar() {
+    let location = useLocation();
+    const { loginWithRedirect } = useAuth0();
+    const { logout } = useAuth0();
+    const { isAuthenticated } = useAuth0();
+    React.useEffect(() => {
+      console.log(location.pathname);
+    }, [location]);
   return (
     <>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
