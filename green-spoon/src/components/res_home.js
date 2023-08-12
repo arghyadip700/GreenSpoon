@@ -1,7 +1,16 @@
 import React from 'react'
 
-export default function res_home() {
+function Res_home() {
   return (
-    <div>res_home</div>
+    <>
+      <div className="container">
+        <h1>
+          “Cutting food waste is a delicious way of saving money, helping to feed the world and protect the planet.”
+        </h1>
+      </div>
+    </>
   )
 }
+
+export default Res_home
+
