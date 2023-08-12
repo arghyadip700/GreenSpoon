@@ -11,7 +11,7 @@ function App() {
 
       <Router>
         <Nav />
-        <div className="container">
+        <div>
           <Routes>
             {/* <Route exact path="/" element={<Home />} />
               <Route exact path="/about" element={<About />} />  */}
