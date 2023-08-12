@@ -52,7 +52,7 @@ function ComHome() {
     <a href="#" className="btn btn-primary">Go somewhere</a>):
     (<a href="#" dis className="btn btn-primary " onClick={() => loginWithRedirect()}>Start Charity</a>)}
   </div>
-        </div>   
+        </div>    
       </div>
       <div className=" head  justify-content-center d-flex m-1 p-1">   OUR IMPACT</div>
       <div className=" our-impact  row m-2 p-5 ">
