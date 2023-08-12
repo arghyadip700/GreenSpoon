@@ -38,9 +38,9 @@ function ComHome() {
      
         <div className="col-sm-6 mb-3 mb-sm-0 d-flex   Rule-ngo-res">
      
-  <div class="card-body  d-flex flex-column justify-content-center ">
-    <h5 class="card-title m-2 d-flex  justify-content-center">Guide For NGOs</h5>
-    <p class="card-text m-2 p-2">
+  <div className="card-body  d-flex flex-column justify-content-center ">
+    <h5 className="card-title m-2 d-flex  justify-content-center">Guide For NGOs</h5>
+    <p className="card-text m-2 p-2">
     <ul>
       <li>Don't have an account? Create your NGO account by Signing Up.</li>
       <li>Log into Green Spoon.</li>
@@ -56,9 +56,9 @@ function ComHome() {
         </div>
         <div className="col-sm-6 mb-3 mb-sm-0 d-flex   Rule-ngo-res">
         
-  <div class="card-body d-flex flex-column justify-content-center">
-    <h5 class="card-title m-2 d-flex  justify-content-center">Guide For RESTAURENTS</h5>
-    <p class="card-text m-2 p-2">
+  <div className="card-body d-flex flex-column justify-content-center">
+    <h5 className="card-title m-2 d-flex  justify-content-center">Guide For RESTAURENTS</h5>
+    <p className="card-text m-2 p-2">
       <ul>
       <li>Don't have an account? Create your restaurant account by Signing Up.</li>
       <li>Log into Green Spoon.</li>
@@ -71,7 +71,7 @@ function ComHome() {
     <a href="#" class="btn btn-primary" onClick={handleclickR}>Go somewhere</a>):
     (<a href="#" dis class="btn btn-primary " onClick={() => loginWithRedirect()}>Start Charity</a>)}
   </div>
-        </div>   
+        </div>    
       </div>
       <div className=" head  justify-content-center d-flex m-1 p-1">   OUR IMPACT</div>
       <div className=" our-impact  row m-2 p-5 ">

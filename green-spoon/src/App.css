@@ -41,6 +41,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* ComHome Page */
+
 .num{
   color: #8dc73f;
     font-family: 'bebas neue',Sans-serif;
@@ -73,17 +76,6 @@
 
 }
 
-/* Restaurant Home page */
-
-.center-text{
-  position: absolute;
-  top: 50%;
-  font-size: 50px;
-  font-weight: 700;
-  color: antiquewhite;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
 .card-text{
   height: 100%;
 }
@@ -106,3 +98,20 @@
   background-color: #4e840788;
 
 }
+
+/* Restaurant Home page */
+
+.center-text{
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  font-weight: 700;
+  color: antiquewhite;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.restContainer{
+  display: flex;
+}
+
