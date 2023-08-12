@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-export default function Home() {
+function ComHome() {
   return (
     <>
       <div className=" head  justify-content-center d-flex m-1 p-1">   OUR IMPACT</div>
@@ -24,5 +24,7 @@ export default function Home() {
         
       </div>
     </>
-  );
+  )
 }
+
+export default ComHome
