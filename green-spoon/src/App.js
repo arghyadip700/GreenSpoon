@@ -10,13 +10,12 @@ function App() {
 
       <Router>
         <Nav />
-        <ComHome />
         <div className="container">
           <Routes>
             {/* <Route exact path="/" element={<Home />} />
               <Route exact path="/about" element={<About />} /> */}
             <Route exact path="/" element={<ComHome />} />
-            <Route exact path="/res_home" element={<Rest_home />} />
+            <Route exact path="/rest_home" element={<Rest_home />} />
           </Routes>
         </div>
       </Router>
