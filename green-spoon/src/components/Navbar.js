@@ -25,7 +25,11 @@ function Navbar() {
         </li>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/rest_home">RestHome</a>
-        </li>        
+        </li>  
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="/ngo_home">NgoHome</a>
+        </li> 
+
         <li className="nav-item">
           <a className="nav-link" href="#">Link</a>
         </li>
