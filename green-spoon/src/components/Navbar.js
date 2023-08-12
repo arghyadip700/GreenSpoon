@@ -6,15 +6,22 @@ function Navbar() {
     let location = useLocation();
     const { loginWithRedirect } = useAuth0();
     const { logout } = useAuth0();
-    const { user } = useAuth0();
-    const { isAuthenticated } = useAuth0();
+    const { user, isAuthenticated } = useAuth0();
     
     
     React.useEffect(() => {
       console.log(location.pathname);
     }, [location]);
+
+   
   return (
     <>
+       
+      
+     
+      
+      
+    
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">Navbar</a>
@@ -37,40 +44,29 @@ function Navbar() {
           <a className="nav-link" href="#">Link</a>
         </li>
         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+       
         </li>
         
         <li className="nav-item">
           <a className="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
 
-        <li>
-       {isAuthenticated && <p>
-        {user.name}
 
-
-       </p>
-
-       }
-    
-  
-    </li>
 
 
         
         {isAuthenticated?(
-  <li class="nav-item">
+         
+          
+  <li class="nav-item d-flex">
+     
+     <li className='m-2 text-success fw-bold'>{user.name}</li> 
   <button type="button" class="btn btn-dark" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
 Log Out
-</button></li>
+</button>
+
+</li>
+
 ):(
   <li class="nav-item">
   <button type="button" class="btn btn-info" onClick={() => loginWithRedirect()}>Log In</button>
@@ -80,8 +76,7 @@ Log Out
     
 )}
 
-
-
+  
 </ul>
 
      
