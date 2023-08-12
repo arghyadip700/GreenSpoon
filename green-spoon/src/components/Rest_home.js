@@ -14,6 +14,15 @@ function Rest_home() {
                     <div className='center-text'>“Cutting food waste is a delicious way of helping to feed the world and protect the planet.” </div>
                 </div>
             </div>
+            <div className="restContainer">
+                
+                
+                <h3>Add your food here</h3>
+
+            </div>
+            <div class="card-body  d-flex flex-column justify-content-center "> 
+    <a href="/next_res" dis class="btn btn-primary " >Add Food</a>
+  </div>
             <h3 className="2nd-heading m-3 text-center">Add your food here</h3>
             <div className="restContainer m-5">
                 {/* <div className="card mx-5" style={{ width: "18rem" }}>
