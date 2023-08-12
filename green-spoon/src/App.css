@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+.num{
+  color: #8dc73f;
+    font-family: 'bebas neue',Sans-serif;
+    font-size: 100px;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+.num-name{
+  color: #8dc73f;
+  font-family: 'bebas neue',Sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+.our-impact{
+  background-color: antiquewhite;
+}
+.head{
+  color: #8dc73f;
+  font-family: 'bebas neue',Sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+.num-name-title{
+  text-align: center;
+  color: #000;
+  font-family: raleway,Sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+
+}
