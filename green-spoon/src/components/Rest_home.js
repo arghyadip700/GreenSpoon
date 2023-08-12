@@ -44,6 +44,7 @@ function Rest_home() {
       </div>
 
 
+
             <h3 className="2nd-heading m-3 text-center">Add your food here</h3>
             <div className="restContainer m-5">
                 {/* <div className="card mx-5" style={{ width: "18rem" }}>
@@ -134,5 +135,7 @@ function Rest_home() {
             </div> */}
         </>
     )
-        }
+}
+
 export default Rest_home
+
