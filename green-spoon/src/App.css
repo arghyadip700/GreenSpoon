@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -66,4 +71,14 @@
   font-weight: 400;
   line-height: 18px;
 
+}
+
+.center-text{
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  font-weight: 700;
+  color: antiquewhite;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
