@@ -4,7 +4,10 @@ import cha from './all-img/Charity-in-People.webp'
 import { useAuth0 } from "@auth0/auth0-react";
 function ComHome() {
   const { loginWithRedirect } = useAuth0();
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated,isLoading } = useAuth0();
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
   return (
     <>
     <div >
