@@ -4,6 +4,7 @@ import Nav from "./components/Navbar";
 import ComHome from "./components/ComHome";
 import Rest_home from "./components/Rest_home";
 import Ngo_home from "./components/Ngo_home";
+import Next_res from "./components/Next_res";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
 
       <Router>
         <Nav />
-       
+      
         <div>
           <Routes>
             {/* <Route exact path="/" element={<Home />} />
@@ -19,6 +20,7 @@ function App() {
             <Route exact path="/" element={<ComHome />} />
             <Route exact path="/rest_home" element={<Rest_home />} />
             <Route exact path="/ngo_home" element={<Ngo_home />} />
+             <Route exact path="/next_res" element={<Next_res />} /> 
           </Routes>
         </div>
       </Router>
