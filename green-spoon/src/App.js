@@ -11,6 +11,7 @@ function App() {
 
       <Router>
         <Nav />
+       
         <div>
           <Routes>
             {/* <Route exact path="/" element={<Home />} />
