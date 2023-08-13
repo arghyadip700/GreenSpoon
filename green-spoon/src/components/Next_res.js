@@ -28,7 +28,8 @@ export default function Next_res() {
           <h2>
             <u>Add Food</u>
           </h2>
-        </center>
+		  
+        </center><br></br>
         <form method="post" id="FOOD">
           <h4>
 		<div class="field">
