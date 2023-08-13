@@ -4,21 +4,14 @@ import userContext from "./userContext";
 
 function UserState(props) {
     const host = "http://localhost:4000";
-    const userInitial = [];
-  
-    const [user, setUser] = useState(userInitial);
+   
     //Add notes to the list of notes
-  const adduser = async ({ name, email,specific }) => {
+  const adduser = async ({ name, email,type }) => {
     //api call
-    const response = await fetch(`${host}/User/findOne`, {
+    const response = await fetch(`http://localhost:4000/user/findOne?email=${email}&username=${name}&type=${type}`, {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
 
-      headers: {
-        "Content-Type": "application/json",
-       
-      },
-
-      body: JSON.stringify({ name,email,specific }), // body data type must match "Content-Type" header
+     
     });
 
     const json = await response.json();

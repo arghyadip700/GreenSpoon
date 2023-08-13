@@ -1,26 +1,26 @@
-import React ,{useState} from 'react'
+import React ,{useState,useContext} from 'react'
 import CountUp from 'react-countup'
 import cha from './all-img/Charity-in-People.webp'
 import { useAuth0 } from "@auth0/auth0-react";
-//import userContext from "./context/user/userContext";
+import userContext from "./context/user/userContext";
 function ComHome() {
-  //const context = userContext(userContext);
-  //const {adduser} = context;
-  const [User,setUser] = useState({name:"",email:"",specific:""})
+  const context = useContext(userContext);
+  const {adduser} = context;
+  const [User,setUser] = useState({name:"",email:"",type:""})
 
   const { loginWithRedirect } = useAuth0();
   const { user, isAuthenticated,isLoading } = useAuth0();
   const handleclick =(e)=>{
     e.preventDefault();
     if(isAuthenticated){
-    setUser({name:user.name,email:user.email,specific:"NGO"})}
-    //adduser(User);
+    setUser({name:user.name,email:user.email,type:"true"})}
+    adduser(User);
   }
   const handleclickR =(e)=>{
     e.preventDefault();
     if(isAuthenticated){
-    setUser({name:user.name,email:user.email,specific:"RESTAURENT"})}
-   // adduser(User);
+    setUser({name:user.name,email:user.email,type:"false"})}
+    adduser(User);
   }
   console.log(User);
   if (isLoading) {
