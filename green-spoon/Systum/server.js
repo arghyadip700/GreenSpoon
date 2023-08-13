@@ -18,16 +18,16 @@ app.get('/user/findOne', async (req, res) => {
 
     const user = await usersCollection.findOne({ email, username, type });
 
-    client.close();
+    client.close(); 
 
     if (user) {
-      res.json(user);
+      return res.json(user);
     } else {
-      res.status(404).json({ error: 'User not found' });
+      return res.status(404).json({ error: 'User not found' });
     }
   } catch (error) {
     console.error('Error:', error);
-    res.status(500).json({ error: 'Server error' });
+    return res.status(500).json({ error: 'Server error' });
   }
 });
 
