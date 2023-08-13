@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Nav from "./components/Navbar";
 import ComHome from "./components/ComHome";
 import Rest_home from "./components/Rest_home";
