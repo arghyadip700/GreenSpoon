@@ -114,4 +114,8 @@
 .restContainer{
   display: flex;
 }
-
+.card-img, .card-img-bottom, .card-img-top {
+  width: 100%;
+  object-fit: cover;
+  height: 20vw;
+}
