@@ -2,7 +2,6 @@
 import Food from './all-img/Food.jpg'
 import React from "react";
 import { Link } from "react-router-dom";
-import React from 'react'
 import veg from './all-img/Vegetables.jpg'
 import meat from './all-img/Meat.jpg'
 import cdf from './all-img/CookedFood.jpg'
