@@ -31,22 +31,27 @@ export default function Next_res() {
         </center>
         <form method="post" id="FOOD">
           <h4>
-            <div class="field">
+		<div class="field">
               <label for="items">Items:</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Add your food items"
-              />
-              <small></small>
+              
+               
+				<select>
+				<option value="veg">Vegetables</option>
+				<option value="meat">Meat</option>
+				<option value="cooked food">Cooked Food</option>
+				<option value="others">others</option>
+				</select>
+
+              
+				
             </div>
+			
             <div class="field">
-              <label for="amount">Amount:</label>
+              <label for="amount">Quantity:</label>
               <input
-                type="text"
+                type="number"
                 id="amount"
-                name="amount"
+                
                 placeholder="Enter amount"
               />
               <small></small>
@@ -58,7 +63,7 @@ export default function Next_res() {
                 type="text"
                 id="expiry time"
                 name="expiry time"
-                placeholder="Enter  expected expiry time"
+                placeholder="expected expiry time"
                 required
               />
               <small></small>
