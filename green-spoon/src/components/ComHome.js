@@ -1,13 +1,32 @@
-import React from 'react'
+import React ,{useState,useContext} from 'react'
 import CountUp from 'react-countup'
 import cha from './all-img/Charity-in-People.webp'
 import { useAuth0 } from "@auth0/auth0-react";
+import userContext from "./context/user/userContext";
 function ComHome() {
+  const context = useContext(userContext);
+  const {adduser} = context;
+  const [User,setUser] = useState({name:"",email:"",type:""})
+
   const { loginWithRedirect } = useAuth0();
-  const { isAuthenticated,isLoading } = useAuth0();
+  const { user, isAuthenticated,isLoading } = useAuth0();
+  const handleclick =(e)=>{
+    e.preventDefault();
+    if(isAuthenticated){
+    setUser({name:user.name,email:user.email,type:"true"})}
+    adduser(User);
+  }
+  const handleclickR =(e)=>{
+    e.preventDefault();
+    if(isAuthenticated){
+    setUser({name:user.name,email:user.email,type:"false"})}
+    adduser(User);
+  }
+  console.log(User);
   if (isLoading) {
     return <div>Loading ...</div>;
   }
+ 
   return (
     <>
     <div >
@@ -31,8 +50,8 @@ function ComHome() {
       </ul>
     </p>
     {isAuthenticated?(
-    <a href="#" className="btn btn-primary">Go somewhere</a>):
-    (<a href="#" dis className="btn btn-primary " onClick={() => loginWithRedirect()}>Collect Food</a>)}
+    <a href="#" class="btn btn-primary" onClick={handleclick}>Go somewhere</a>):
+    (<a href="#" dis class="btn btn-primary " onClick={() => loginWithRedirect()}>Collect Food</a>)}
   </div>
         </div>
         <div className="col-sm-6 mb-3 mb-sm-0 d-flex   Rule-ngo-res">
@@ -49,8 +68,8 @@ function ComHome() {
       </ul> 
     </p>
     {isAuthenticated?(
-    <a href="#" className="btn btn-primary">Go somewhere</a>):
-    (<a href="#" dis className="btn btn-primary " onClick={() => loginWithRedirect()}>Start Charity</a>)}
+    <a href="#" class="btn btn-primary" onClick={handleclickR}>Go somewhere</a>):
+    (<a href="#" dis class="btn btn-primary " onClick={() => loginWithRedirect()}>Start Charity</a>)}
   </div>
         </div>    
       </div>

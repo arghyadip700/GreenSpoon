@@ -9,7 +9,7 @@ import Next_res from "./components/Next_res";
 function App() {
   return (
     <>
-
+    <UserState>
       <Router>
         <Nav />
       
@@ -24,6 +24,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+      </UserState>
 
     </>
   );

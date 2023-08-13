@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { Link, useLocation } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -7,8 +7,14 @@ function Navbar() {
     const { loginWithRedirect } = useAuth0();
     const { logout } = useAuth0();
     const { user, isAuthenticated } = useAuth0();
-    
-    
+    const [useremail,setemail] = useState('');
+    useEffect(()=>{
+      if(isAuthenticated){
+        setemail(user.email);
+       
+      }
+    },[isAuthenticated,user]);
+    console.log(useremail);
     React.useEffect(() => {
       console.log(location.pathname);
     }, [location]);
@@ -54,7 +60,7 @@ function Navbar() {
           
   <li class="nav-item d-flex">
      
-     <li className='m-2 text-success fw-bold'>{user.name}</li> 
+     <li className='m-2 text-success fw-bold'>{user.email}</li> 
   <button type="button" class="btn btn-dark" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
 Log Out
 </button>
