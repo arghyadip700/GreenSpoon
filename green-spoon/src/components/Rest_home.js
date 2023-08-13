@@ -1,14 +1,16 @@
 
 import Food from './all-img/Food.jpg'
 import React from "react";
+import { Link } from "react-router-dom";
+import React from 'react'
 import veg from './all-img/Vegetables.jpg'
 import meat from './all-img/Meat.jpg'
 import cdf from './all-img/CookedFood.jpg'
 import oth from './all-img/Paneer.jpg'
-import { Link } from 'react-router-dom'
 
 function Rest_home() {
     return (
+
         <>
             <div className="Rest-home-page" style={{ width: "100%" }}>
                 <div style={{
@@ -35,41 +37,14 @@ function Rest_home() {
 
         </div >
       
-      
+       
 
-
+           
 
             <h3 className="2nd-heading m-3 text-center">Add your food here</h3>
 
             < div className="d-flex restContainer  row">
-                {/* <div className="card mx-5" style={{ width: "18rem" }}>
-                    <img src={veg} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Vegetables</h5>
-                        <a href="/" className="btn btn-primary">ADD</a>
-                    </div>
-                </div>
-                <div className="card mx-5" style={{ width: "18rem" }}>
-                    <img src={meat} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Meat</h5>
-                        <a href="/" className="btn btn-primary">ADD</a>
-                    </div>
-                </div>
-                <div className="card mx-5" style={{ width: "18rem" }}>
-                    <img src={cdf} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Cooked Food</h5>
-                        <a href="/" className="btn btn-primary">ADD</a>
-                    </div>
-                </div>
-                <div className="card mx-5" style={{ width: "18rem" }}>
-                    <img src={oth} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Others</h5>
-                        <a href="/" className="btn btn-primary">ADD</a>
-                    </div>
-                </div> */}
+               
                 <div class="card  col-sm-3  p-2" >
                     <img class="card-img-top" src={veg}
                         alt="Card image cap" />
@@ -135,9 +110,6 @@ function Rest_home() {
 
             
 
-            {/* {/* <div className="card-body  d-flex flex-column justify-content-center ">
-                <a href="/next_res" dis className="btn btn-primary " >Add Food</a>
-            </div> */}
         </>
     )
 }
