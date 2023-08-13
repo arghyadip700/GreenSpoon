@@ -34,19 +34,14 @@ function Rest_home() {
             </div>
 
         </div >
-      <div className="restContainer">
-        <h3>Add your food here</h3>
-      </div>
-      <div className="card-body  d-flex flex-column justify-content-center ">
-        <Link to="/next_res" dis className="btn btn-primary ">
-          Add Food
-        </Link>
-      </div>
+      
+      
 
 
 
             <h3 className="2nd-heading m-3 text-center">Add your food here</h3>
-            <div className="restContainer m-5">
+
+            < div className="d-flex restContainer  row">
                 {/* <div className="card mx-5" style={{ width: "18rem" }}>
                     <img src={veg} className="card-img-top" alt="..." />
                     <div className="card-body">
@@ -75,7 +70,7 @@ function Rest_home() {
                         <a href="/" className="btn btn-primary">ADD</a>
                     </div>
                 </div> */}
-                <div class="card mx-auto" style={{ width: "18rem" }}>
+                <div class="card  col-sm-3  p-2" >
                     <img class="card-img-top" src={veg}
                         alt="Card image cap" />
 
@@ -83,37 +78,45 @@ function Rest_home() {
                         <h5 class="card-title">
                             Vegetables
                         </h5>
-                        <a href="/" class="btn btn-success">
-                            ADD
-                        </a>
-                    </div>
-                </div>
-                <div class="card mx-auto" style={{ width: "18rem" }}>
+                        <div className="card-body  d-flex flex-column justify-content-center ">
+        <Link to="/next_res" dis className="btn btn-primary ">
+          Add
+        </Link>
+      </div>
+      </div>
+      </div>
+      
+                
+                <div class="card  col-sm-3  p-2" >
                     <img class="card-img-top" src={meat}
                         alt="Card image cap" />
 
-                    <div class="card-body">
+                    <div class="card-body ">
                         <h5 class="card-title">
                             Meat
                         </h5>
-                        <a href="/" class="btn btn-success">
-                            ADD
-                        </a>
+                        <div className="card-body  d-flex flex-column justify-content-center ">
+        <Link to="/next_res" dis className="btn btn-primary ">
+          Add
+        </Link>
+      </div>
                     </div>
                 </div>
-                <div class="card mx-auto" style={{ width: "18rem" }}>
+                <div class="card col-sm-3  p-2" >
                     <img class="card-img-top" src={cdf}
                         alt="Card image cap" />
                     <div class="card-body">
                         <h5 class="card-title">
                             Cooked Food
                         </h5>
-                        <a href="/" class="btn btn-success">
-                            ADD
-                        </a>
+                        <div className="card-body  d-flex flex-column justify-content-center ">
+        <Link to="/next_res" dis className="btn btn-primary ">
+          Add
+        </Link>
+      </div>
                     </div>
                 </div>
-                <div class="card mx-auto" style={{ width: "18rem" }}>
+                <div class="card col-sm-3  p-2" >
                     <img class="card-img-top" src={oth}
                         alt="Card image cap" />
 
@@ -121,9 +124,11 @@ function Rest_home() {
                         <h5 class="card-title">
                             Others
                         </h5>
-                        <a href="/" class="btn btn-success">
-                            ADD
-                        </a>
+                        <div className="card-body  d-flex flex-column justify-content-center ">
+        <Link to="/next_res" dis className="btn btn-primary ">
+          Add
+        </Link>
+      </div>
                     </div>
                 </div>
             </div>
