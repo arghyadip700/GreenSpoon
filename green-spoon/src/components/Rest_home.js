@@ -1,8 +1,6 @@
 
 import React from "react";
-import ab from "./all-img/Food.jpg";
 import { Link } from "react-router-dom";
-=======
 import React from 'react'
 import ab from './all-img/Food.jpg'
 import veg from './all-img/Vegetables.jpg'
@@ -14,43 +12,7 @@ import { Link } from 'react-router-dom'
 function Rest_home() {
     return (
         <>
-            <div className="Rest-home-page" style={{ width: "100%" }}>
-                <div style={{
-                    margin: 0,
-                    width: "100%",
-                    padding: "0",
-                    background: "black",
-                    overflow: "hidden",
-                    position: "relative",
-                    textAlign: "center",
-                    color: "white",
-                }}>
-                <img
-                    src={ab}
-                    className="d-block w-100"
-                    alt="..."
-                    style={{ opacity: "0.4", objectFit: "cover", height: "100vh" }}
-                />
-                <div className="center-text">
-                    “Cutting food waste is a delicious way of helping to feed the world
-                    and protect the planet.”{" "}
-                </div>
-            </div>
-
-        </div >
-      <div className="restContainer">
-        <h3>Add your food here</h3>
-      </div>
-      <div className="card-body  d-flex flex-column justify-content-center ">
-        <Link to="/next_res" dis className="btn btn-primary ">
-          Add Food
-        </Link>
-      </div>
-    </>
-  );
-}
-
-export default Rest_home;
+         
 
             <h3 className="2nd-heading m-3 text-center">Add your food here</h3>
             <div className="restContainer m-5">
