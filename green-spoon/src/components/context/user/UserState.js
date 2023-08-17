@@ -173,8 +173,29 @@ const getuser = async (email) => {
 
     setorderItems(json);
   };
+
+  //get taken order
+  const takenorder = async () => {
+    //api call
+    
+    const response = await fetch(`${host}/api/server/takenorder`, {
+      method: "GET", // *GET, POST, PUT, DELETE, etc.
+
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token":localStorage.getItem('token'),
+      },
+
+    });
+
+    const json = await response.json();
+
+    console.log(json);
+
+    setorderItems(json);
+  };
   return (
-    <userContext.Provider value={{ adduser,additem,Items,getitems,getuser,getfood,addorder,getorderfood ,orderItems}}>
+    <userContext.Provider value={{ adduser,additem,Items,getitems,getuser,getfood,addorder,getorderfood ,orderItems,takenorder}}>
     {props.children}
   </userContext.Provider>
   )

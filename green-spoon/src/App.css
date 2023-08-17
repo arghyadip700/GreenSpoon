@@ -319,5 +319,21 @@
    writing-mode: vertical-lr;
   transform: rotate(90deg); 
 } */
+.arrow-button-left {
+  color: #ff5833c7;
+  background-color: rgba(255, 255, 255, 0.642);
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 0px 41px 41px 0px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+   transform: translateY(-50%) rotate(0deg); 
 
+  z-index: 2;
+  box-shadow: 0px 4px 8px rgba(41, 41, 41, 0.354);
+  transition: transform 0.3s, box-shadow 0.3s;
+ 
+}
 
