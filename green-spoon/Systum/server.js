@@ -169,7 +169,7 @@ router.get('/getorderfood',fetchuser,async(req,res)=>{
   res.json(items)
 } catch (error) {
    
-  return res.status(400).json({ error:"Internal server error"});
+  return res.status(400).json(error.message);
 
 
 }
@@ -178,10 +178,11 @@ router.get('/getorderfood',fetchuser,async(req,res)=>{
 //Ngo collect the item
 router.post('/putorder',fetchuser, async (req, res) => {
   
- 
+  let usern=await User.findById(req.user.id)
   try {
       
     const Item = await order.create({
+      ngoname:usern.username,
       name:req.body.name,
       Item: req.body.Item,
       Quantity: req.body.Quantity,
@@ -202,6 +203,25 @@ router.post('/putorder',fetchuser, async (req, res) => {
     
   }
 
+  })
+
+  //in restaurent taken order
+
+  router.get('/takenorder',fetchuser,async(req,res)=>{
+    //let usern=await User.findById(req.user.id)
+    // if(usern.type=="Res" || usern.type=="res") return res.status(403).json({error:"you cant collect"});
+    // else{
+    try{
+    
+   const items = await order.find({ resId: req.user.id });;
+    res.json(items)
+  } catch (error) {
+     
+    return res.status(400).json(error.message);
+  
+  
+  }
+    
   })
 //   router.delete('/deletenotes/:id',fetchuser, async (req, res) => {
 //     try{

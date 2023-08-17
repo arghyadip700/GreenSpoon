@@ -3,7 +3,14 @@ import React ,{useState,useContext} from 'react'
 import userContext from "./context/user/userContext";
 import Addeditems from "./Addeditems";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
 export default function Next_res() {
+	let navigate = useNavigate();
+    const pagechange=()=>{
+        let path = `/Takenorder`; 
+        navigate(path);
+    
+      }
 	const context = useContext(userContext);
 	var names;
 	const {additem} = context;
@@ -66,6 +73,11 @@ export default function Next_res() {
       </div>
 	  <h3> all items</h3>
 	  <Addeditems/>
+	  <div className="button-container w-20">
+          <button className="arrow-button " onClick={pagechange}>
+            <span><i class="fa-solid fa-circle-check" ></i></span>
+          </button>
+        </div>
 	  </>
   )
 }
