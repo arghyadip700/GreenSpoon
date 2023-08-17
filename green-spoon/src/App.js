@@ -6,6 +6,7 @@ import Rest_home from "./components/Rest_home";
 import Ngo_home from "./components/Ngo_home";
 import Next_res from "./components/Next_res";
 import UserState from "./components/context/user/UserState";
+import Yourorder from "./components/Yourorder";
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/rest_home" element={<Rest_home />} />
             <Route exact path="/ngo_home" element={<Ngo_home />} />
              <Route exact path="/next_res" element={<Next_res />} /> 
+             <Route exact path="/Yourorder" element={<Yourorder/>}/>
           </Routes>
         </div>
       </Router>
