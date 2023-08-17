@@ -92,7 +92,7 @@ function ComHome() {
             <CountUp start={0} end={50} duration={2} delay={0}/>
             +</div>
            <div className="num-name d-flex  justify-content-center">NGOS</div>
-           <div className="num-name-title d-flex  justify-content-center">Charity brings to life again those who are spiritually dead.</div>
+           <div className="num-name-title d-flex  justify-content-center">Arround Kolkata are connected with us.</div>
 
           </div>
         </div>
@@ -100,7 +100,7 @@ function ComHome() {
           <div className="d-flex flex-column ">
            <div className="num d-flex  justify-content-center"><CountUp start={0} end={100} duration={2} delay={0}/>+</div>
            <div className="num-name d-flex  justify-content-center">RESTAURENTS</div>
-           <div className="num-name-title d-flex  justify-content-center">Charity brings to life again those who are spiritually dead.</div>
+           <div className="num-name-title d-flex  justify-content-center">Arround Kolkata are connected with us.</div>
           </div>
         </div>
        

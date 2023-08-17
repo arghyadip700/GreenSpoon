@@ -60,6 +60,7 @@ export default function Next_res() {
 	
 </form>
 
+            
 
 
       </div>
@@ -68,4 +69,3 @@ export default function Next_res() {
 	  </>
   )
 }
-
