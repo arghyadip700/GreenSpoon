@@ -46,6 +46,12 @@
   margin: 0;
   padding: 0;
 }
+
+/* loader */
+.loader{
+  width:100vw;
+  height:100vh;
+}
 /* ComHome Page */
 
 .num{
@@ -335,5 +341,11 @@
   box-shadow: 0px 4px 8px rgba(41, 41, 41, 0.354);
   transition: transform 0.3s, box-shadow 0.3s;
  
+}
+.arrow-button-left:hover {
+  background-color: #ff5833c7;
+  color: white;
+  transform: translateY(-50%) rotate(0deg) scale(1.05);
+  box-shadow: 0px 4px 8px rgba(43, 43, 43, 0.47);
 }
 
