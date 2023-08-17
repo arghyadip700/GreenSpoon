@@ -6,7 +6,7 @@ function Navbar() {
     let location = useLocation();
     const { loginWithRedirect } = useAuth0();
     const { logout } = useAuth0();
-    const { user, isAuthenticated } = useAuth0();
+    const { user, isAuthenticated,isLoading } = useAuth0();
     const [useremail,setemail] = useState('');
     useEffect(()=>{
       if(isAuthenticated){
@@ -18,7 +18,9 @@ function Navbar() {
     React.useEffect(() => {
       console.log(location.pathname);
     }, [location]);
-
+    if (isLoading) {
+      return <div></div>;
+    }
    
   return (
     <>

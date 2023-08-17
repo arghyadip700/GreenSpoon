@@ -5,6 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
 import userContext from "./context/user/userContext";
 import { async } from 'q';
+import load from './all-img/handshake.gif'
 function ComHome() {
   let navigate = useNavigate();
   const context = useContext(userContext);
@@ -33,11 +34,12 @@ function ComHome() {
   }
   console.log(User);
   if (isLoading) {
-    return <div>Loading ...</div>;
+    return <div><img className='loader' src={load}/></div>;
   }
  
   return (
     <>
+   {/* <div className='w-100 h-100'><img className='w-100 h-100' src={load}/></div>  */}
     <div >
     
       
