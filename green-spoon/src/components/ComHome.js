@@ -2,25 +2,34 @@ import React ,{useState,useContext} from 'react'
 import CountUp from 'react-countup'
 import cha from './all-img/Charity-in-People.webp'
 import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
 import userContext from "./context/user/userContext";
+import { async } from 'q';
 function ComHome() {
+  let navigate = useNavigate();
   const context = useContext(userContext);
-  const {adduser} = context;
+  const {adduser,getuser} = context;
   const [User,setUser] = useState({name:"",email:"",type:""})
 
   const { loginWithRedirect } = useAuth0();
   const { user, isAuthenticated,isLoading } = useAuth0();
-  const handleclick =(e)=>{
+  const handleclick =async(e)=>{
     e.preventDefault();
     if(isAuthenticated){
-    setUser({name:user.name,email:user.email,type:"true"})}
-    adduser(User);
-  }
-  const handleclickR =(e)=>{
+     setUser({name:user.name,email:user.email,type:'Ngo'})
+    await adduser(user.name,user.email,'Ngo');
+    await getuser(user.email)}
+    let path = `/Ngo_home`; 
+    navigate(path);
+    }
+  const handleclickR =async(e)=>{
     e.preventDefault();
     if(isAuthenticated){
-    setUser({name:user.name,email:user.email,type:"false"})}
-    adduser(User);
+    //  setUser({name:user.name,email:user.email,type:'Res'})
+     await adduser(user.name,user.email,'res');
+  await getuser(user.email)}
+  let path = `/rest_home`; 
+    navigate(path);
   }
   console.log(User);
   if (isLoading) {
@@ -30,6 +39,7 @@ function ComHome() {
   return (
     <>
     <div >
+    
       
       <img src={cha} className="d-block w-100 " alt="..." style={{ opacity: "0.8", objectFit: "cover", height: "100%" }}/>
     </div>
@@ -50,8 +60,8 @@ function ComHome() {
       </ul>
     </p>
     {isAuthenticated?(
-    <a href="#" class="btn btn-primary" onClick={handleclick}>Go somewhere</a>):
-    (<a href="#" dis class="btn btn-primary " onClick={() => loginWithRedirect()}>Collect Food</a>)}
+    <a href="#" className="btn btn-primary ngo" onClick={handleclick}>Collect Food</a>):
+    (<a href="#" dis className="btn btn-primary ngo" onClick={() => loginWithRedirect()}>Collect Food</a>)}
   </div>
         </div>
         <div className="col-sm-6 mb-3 mb-sm-0 d-flex   Rule-ngo-res">
@@ -68,8 +78,8 @@ function ComHome() {
       </ul> 
     </p>
     {isAuthenticated?(
-    <a href="#" class="btn btn-primary" onClick={handleclickR}>Go somewhere</a>):
-    (<a href="#" dis class="btn btn-primary " onClick={() => loginWithRedirect()}>Start Charity</a>)}
+    <a href="/rest_home" className="btn btn-primary restu" onClick={handleclickR}>Donate Food</a>):
+    (<a href="#" dis className="btn btn-primary restu " onClick={() => loginWithRedirect()}>Start Charity</a>)}
   </div>
         </div>    
       </div>

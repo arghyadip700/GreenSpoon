@@ -33,35 +33,54 @@ function Navbar() {
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/">Home</a>
         </li>
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/rest_home">Restaurant</a>
+        {/* <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="/rest_home">RestHome</a>
         </li>  
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/ngo_home">NGO</a>
-        </li> 
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/about">About Us</a>
+          <a className="nav-link active" aria-current="page" href="/ngo_home">NgoHome</a>
+        </li>  */}
+
+        {/* <li className="nav-item">
+          <a className="nav-link" href="#">Link</a>
         </li>
-        {isAuthenticated?(
-  <li class="nav-item d-flex">
-     <li className='m-2 text-success fw-bold'>{user.email}</li> 
-  <button type="button" class="btn btn-dark" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-Log Out
-</button>
+        <li className="nav-item dropdown">
+       
+        </li> */}
+        
+        {/* <li className="nav-item">
+          <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> */}
 
-</li>
 
-):(
-  <li class="nav-item">
-  <button type="button" class="btn btn-info" onClick={() => loginWithRedirect()}>Log In</button>
-  </li>
 
-  
-    
-)}
+
+        
+        
 
   
 </ul>
+
+     
+      <form className="d-flex" role="search">
+        {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button className="btn btn-outline-success" type="submit">Search</button> */}
+        {isAuthenticated?(
+         <li className="nav-item d-flex" style={{listStyle: "none"}}>
+            <li className='m-2 text-success fw-bold' style={{listStyle: "none"}}>{user.email}</li> 
+         <button type="button" className="btn btn-dark" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+       Log Out
+       </button>
+       </li>
+       
+       ):(
+         <li className="nav-item" style={{listStyle: "none"}}>
+         <button type="button" className="btn btn-info" onClick={() => loginWithRedirect()}>Log In</button>
+         </li>
+       
+         
+           
+       )}
+      </form>
     </div>
   </div>
 </nav>

@@ -42,6 +42,10 @@
   }
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
 /* ComHome Page */
 
 .num{
@@ -100,12 +104,23 @@
 }
 
 /* Restaurant Home page */
+.Rest-home-page{
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  color: white;
+  border-radius:  0px 0px 50px 50px ;
+}
 
 .center-text{
   position: absolute;
   top: 50%;
-  font-size: 50px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 300;
   color: antiquewhite;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -114,9 +129,195 @@
 .restContainer{
   display: flex;
 }
+.restContainer .col-sm-3{
+  width:22%,
+}
 .card-img, .card-img-bottom, .card-img-top {
   width: 100%;
   object-fit: cover;
-  height: 20vw;
+  height: 10vw;
 }
+
+/* "next_res" */
+.items{
+  width: max-content;
+}
+.res-body{
+  align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+.w-60vw{
+  width: 60vw;
+}
+.ngo ,.restu{
+  display: block;
+}
+
+
+/* CSS FOR NGO HOME PAGE */
+    .res_name{
+      color: #202124;
+        font-family: Google Sans,arial,sans-serif;
+        font-size: 25px;
+        line-height: 24px;
+        padding-bottom: 2px;
+    }
+    .item_d{
+      color: #616a84;
+        font-family: Google Sans,arial,sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        padding-bottom: 2px;
+
+    }
+    .item-card {
+      border: none;
+      padding: 16px;
+      margin: 16px;
+      width: 300px;
+      background-color: #fff;
+      overflow: hidden;
+      position: relative;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .item-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .item-card h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .item-card p {
+      margin-bottom: 16px;
+      color: #777;
+    }
+
+    .item-card button {
+      background-color: #ff5733;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .item-card button:hover {
+      background-color: #e64720;
+    }
+
+    /* 3D effect */
+    .item-card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      transform: perspective(1000px) rotateX(3deg);
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .item-card:hover:before {
+      opacity: 1;
+      transform: perspective(1000px) rotateX(0deg);
+    }
+
+    /* Parallax scrolling effect */
+    .item-card-inner {
+      transform: perspective(1000px) translateZ(0);
+    }
+
+    .item-card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transform: translateZ(-1px) scale(1.1);
+      z-index: -1;
+    }
+    /* Sidebar styles */
+    .sidebar {
+      
+      margin-right: 2px;
+      height:100vh;
+      background: linear-gradient(135deg, #ff5733, #e64720);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      transform-origin: left top;
+      top: 0;
+      left: 0;
+    }
+
+    .sidebar h2 {
+      margin: 0;
+      font-size: 1.5rem;
+       
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      padding: 10px;
+    }
+
+/* Button styles */
+.arrow-button {
+  color: #ff5833c7;
+  background-color: rgba(255, 255, 255, 0.642);
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 41px 0px 0px 41px;
+  position: fixed;
+  top: 50%;
+  right: 0;
+   transform: translateY(-50%) rotate(0deg); 
+
+  z-index: 2;
+  box-shadow: 0px 4px 8px rgba(41, 41, 41, 0.354);
+  transition: transform 0.3s, box-shadow 0.3s;
+ 
+}
+.arrow-button:hover {
+  background-color: #ff5833c7;
+  color: white;
+  transform: translateY(-50%) rotate(0deg) scale(1.05);
+  box-shadow: 0px 4px 8px rgba(43, 43, 43, 0.47);
+}
+/* .arrow-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+  background: rgba(156, 147, 147, 0.1);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  z-index: -1;
+}
+.arrow-button:hover::before {
+  transform: scaleX(7);
+} */
+
+/* .arrow-button span {
+   writing-mode: vertical-lr;
+  transform: rotate(90deg); 
+} */
+
 

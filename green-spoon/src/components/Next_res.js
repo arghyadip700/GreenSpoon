@@ -1,84 +1,71 @@
-import React from "react";
-import don from "./all-img/donation.jpg";
+
+import React ,{useState,useContext} from 'react'
+import userContext from "./context/user/userContext";
+import Addeditems from "./Addeditems";
+import { useAuth0 } from "@auth0/auth0-react";
 export default function Next_res() {
+	const context = useContext(userContext);
+	var names;
+	const {additem} = context;
+	const [items,setitems] = useState({item:"",quantity:"",exp:""})
+	
+	const handleclick =(e)=>{
+	  e.preventDefault();
+	
+	  additem(items);
+	 
+
+	  setitems({item:"",quantity:"",exp:""})
+	}
+	const onchange = (e)=>{
+	  setitems({...items,[e.target.name]: e.target.value})
+	}
   return (
-    <>
-      <div className="Rest-home-page" style={{ width: "100%" }}>
-        <div
-          style={{
-            margin: 0,
-            width: "100%",
-            padding: "0",
-            background: "black",
-            overflow: "hidden",
-            position: "relative",
-            textAlign: "center",
-            color: "white",
-          }}
-        >
-          <img
-            src={don}
-            className="d-block w-100"
-            alt="..."
-            style={{ opacity: "0.4", objectFit: "cover", height: "100vh" }}
-          />
-          <div className="center-text">
-		  <div className="Next-res-container">
-        <center>
-          <h2>
-            <u>Add Food</u>
-          </h2>
-		  
-        </center><br></br>
-        <form method="post" id="FOOD">
-          <h4>
-		<div class="field">
-              <label for="items">Items:</label>
-              
-               
-				<select>
-				<option value="veg">Vegetables</option>
-				<option value="meat">Meat</option>
-				<option value="cooked food">Cooked Food</option>
-				<option value="others">others</option>
-				</select>
+	<>
+    <div className='res-body'>
+      <center><h2><u>Add Food</u></h2></center>
+      <form  className='w-60vw d-flex flex-column align-item-center' method="post" id="FOOD">
+	{/* {isAuthenticated?(
+		<input  className=" d-lg-none " type="text" id="name" name="name" value={user.name}  />
+	):(
+		<input  className=" d-lg-none " type="text" id="name" name="name" value={"xyz"}  />
+	)} */}
+	<div class="field  m-3">
+		<label className="  col-sm-6" for="items ">Items:</label>
+		<input  className="  col-sm-6" type="text" id="name" name="item" value={items.item}  onChange={onchange} placeholder="Add your food items" />
+		<small></small>
+	</div>
+	<div class="field  m-3">
+		<label className="  col-sm-6" for="amount">Amount:</label>
+		<input  className="  col-sm-6" type="number" id="amount" name="quantity" value={items.quantity} onChange={onchange} placeholder="Enter quantity" />
+		<small></small>
+	</div>
+	< div class = "input-container m-3" >
+		<label className="  col-sm-6 "  for="expiry time">Expiry time:</label>
+		
+		
+		<input  className="  col-sm-6 " type="datetime-local" id="expiry time" name="exp"  
+		value={items.exp}
+		onChange={onchange}
+			placeholder="Enter  expected expiry time" required />
+		<small></small>
+	</div>
+	
+	<br></br>
 
-              
-				
-            </div>
-			
-            <div class="field">
-              <label for="amount">Quantity:</label>
-              <input
-                type="number"
-                id="amount"
-                
-                placeholder="Enter amount"
-              />
-              <small></small>
-            </div>
-            <div class="input-container">
-              <label for="expiry time">Expiry time:</label>
-
-              <input
-                type="text"
-                id="expiry time"
-                name="expiry time"
-                placeholder="expected expiry time"
-                required
-              />
-              <small></small>
-            </div>
-          </h4>
-          <br></br>
-
-          <button type="submit">ADD</button>
-        </form>
-      </div>
-          </div>
+	<div class="col-md-12 text-center">
+            <button type="button" className="btn btn-primary m-3" onClick={handleclick}>Submit</button>
+            <button type="button" className="btn btn-warning m-3">Cancel</button>
         </div>
+	
+</form>
+
+            
+
+
       </div>
-      
-    </>
-  );
+	  <h3> all items</h3>
+	  <Addeditems/>
+	  </>
+  )
 }
