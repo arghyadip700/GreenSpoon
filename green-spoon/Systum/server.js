@@ -160,9 +160,9 @@ router.post('/createuser',  async (req, res) => {
 })
 
 router.get('/getorderfood',fetchuser,async(req,res)=>{
-  //let usern=await User.findById(req.user.id)
-  // if(usern.type=="Res" || usern.type=="res") return res.status(403).json({error:"you cant collect"});
-  // else{
+  let usern=await User.findById(req.user.id)
+   if(usern.type=="Res" || usern.type=="res") return res.status(403).json({error:"you cant collect"});
+   else{
   try{
   
  const items = await order.find({ user: req.user.id });;
@@ -173,6 +173,7 @@ router.get('/getorderfood',fetchuser,async(req,res)=>{
 
 
 }
+   }
   
 })
 //Ngo collect the item
