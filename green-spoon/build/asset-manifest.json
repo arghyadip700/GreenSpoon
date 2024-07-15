@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.47fa1ba0.css",
+    "main.js": "/static/js/main.c3a2aba2.js",
+    "static/media/Food.jpg": "/static/media/Food.dc90cdd1343b51bca250.jpg",
+    "static/media/Vegetables.jpg": "/static/media/Vegetables.2d09f057107af539287e.jpg",
+    "static/media/CookedFood.jpg": "/static/media/CookedFood.04d2da5bfae3ca186b4a.jpg",
+    "static/media/Meat.jpg": "/static/media/Meat.cc7430f8b82ea03cdcff.jpg",
+    "static/media/handshake.gif": "/static/media/handshake.1435559f0a3b426a76bd.gif",
+    "static/media/Paneer.jpg": "/static/media/Paneer.990f0df501e3740eff05.jpg",
+    "static/media/istockphoto-.jpg": "/static/media/istockphoto-.eb14bb2e4a0e719c459e.jpg",
+    "static/media/Charity-in-People.webp": "/static/media/Charity-in-People.16cab8958f856ac42c25.webp",
+    "index.html": "/index.html",
+    "main.47fa1ba0.css.map": "/static/css/main.47fa1ba0.css.map",
+    "main.c3a2aba2.js.map": "/static/js/main.c3a2aba2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.47fa1ba0.css",
+    "static/js/main.c3a2aba2.js"
+  ]
+}
