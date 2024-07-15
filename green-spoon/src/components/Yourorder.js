@@ -9,9 +9,9 @@ function Yourorder() {
     
       }
     const context = useContext(userContext);
-  const { orderItems,  getorderfood } = context;
+  const { orderItems,  getOrderFood } = context;
   useEffect(() => {
-    getorderfood();
+    getOrderFood();
     // eslint-disable-next-line
   }, []);
   return (
